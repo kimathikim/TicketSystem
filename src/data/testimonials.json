@@ -1,0 +1,29 @@
+[
+  {
+    "id": "1",
+    "name": "Sarah Wanjiku",
+    "role": "Event Organizer",
+    "image": "https://images.unsplash.com/photo-1494790108755-2616b612b784",
+    "content": "TicketKenya made organizing our tech conference seamless. The platform is user-friendly and the customer support is exceptional!",
+    "rating": 5,
+    "event": "Nairobi Tech Summit 2024"
+  },
+  {
+    "id": "2",
+    "name": "David Kipchoge",
+    "role": "Music Fan",
+    "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+    "content": "I've bought tickets for multiple concerts through TicketKenya. Fast, reliable, and I love the instant QR codes!",
+    "rating": 5,
+    "event": "Sauti Sol Concert"
+  },
+  {
+    "id": "3",
+    "name": "Grace Muthoni",
+    "role": "Startup Founder",
+    "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80",
+    "content": "The mobile experience is fantastic. Bought tickets for my whole team while on the go. Very impressed!",
+    "rating": 5,
+    "event": "DevFest Nairobi 2024"
+  }
+]
