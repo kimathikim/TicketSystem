@@ -8,7 +8,7 @@
     "time": "09:00",
     "location": "KICC, Nairobi",
     "venue": "Kenyatta International Convention Centre",
-    "description": "Kenya's largest technology conference bringing together innovators, entrepreneurs, and tech leaders.",
+    "description": "Kenya's largest technology conference bringing together innovators, entrepreneurs, and tech leaders from across East Africa.",
     "organizer": "TechKenya",
     "prices": {
       "regular": 2500,
@@ -17,7 +17,8 @@
     },
     "featured": true,
     "capacity": 2000,
-    "tags": ["Technology", "Innovation", "Networking"]
+    "tags": ["Technology", "Innovation", "Networking"],
+    "hasSeating": true
   },
   {
     "id": "2",
@@ -28,7 +29,7 @@
     "time": "14:00",
     "location": "Carnivore Grounds, Nairobi",
     "venue": "Carnivore Simba Saloon",
-    "description": "Kenya's premier music and food festival featuring local and international artists.",
+    "description": "Kenya's premier music and food festival featuring local and international artists with authentic Kenyan cuisine.",
     "organizer": "Koroga Events",
     "prices": {
       "regular": 1500,
@@ -37,7 +38,8 @@
     },
     "featured": true,
     "capacity": 5000,
-    "tags": ["Music", "Food", "Entertainment"]
+    "tags": ["Music", "Food", "Entertainment"],
+    "hasSeating": false
   },
   {
     "id": "3",
@@ -48,7 +50,7 @@
     "time": "19:00",
     "location": "Kasarani Stadium, Nairobi",
     "venue": "Moi International Sports Centre Kasarani",
-    "description": "East Africa's biggest music star performs live in Nairobi.",
+    "description": "East Africa's biggest music star performs live in Nairobi with special guest performances.",
     "organizer": "Live Nation Kenya",
     "prices": {
       "regular": 2000,
@@ -57,7 +59,8 @@
     },
     "featured": true,
     "capacity": 30000,
-    "tags": ["Music", "Concert", "Bongo Flava"]
+    "tags": ["Music", "Concert", "Bongo Flava"],
+    "hasSeating": true
   },
   {
     "id": "4",
@@ -68,7 +71,7 @@
     "time": "16:00",
     "location": "Nyayo Stadium, Nairobi",
     "venue": "Nyayo National Stadium",
-    "description": "International football friendly match between Kenya and Nigeria.",
+    "description": "International football friendly match between Kenya and Nigeria national teams.",
     "organizer": "Football Kenya Federation",
     "prices": {
       "regular": 500,
@@ -77,7 +80,8 @@
     },
     "featured": false,
     "capacity": 30000,
-    "tags": ["Football", "Sports", "International"]
+    "tags": ["Football", "Sports", "International"],
+    "hasSeating": true
   },
   {
     "id": "5",
@@ -88,7 +92,7 @@
     "time": "08:00",
     "location": "University of Nairobi",
     "venue": "Taifa Hall, University of Nairobi",
-    "description": "Google Developer Groups' largest annual event focused on modern technologies.",
+    "description": "Google Developer Groups' largest annual event focused on modern technologies and innovation.",
     "organizer": "GDG Nairobi",
     "prices": {
       "regular": 1000,
@@ -97,7 +101,8 @@
     },
     "featured": false,
     "capacity": 800,
-    "tags": ["Technology", "Google", "Developers"]
+    "tags": ["Technology", "Google", "Developers"],
+    "hasSeating": true
   },
   {
     "id": "6",
@@ -108,7 +113,7 @@
     "time": "17:00",
     "location": "Uhuru Gardens, Nairobi",
     "venue": "Uhuru Gardens National Monument",
-    "description": "German-inspired beer festival with live music and authentic cuisine.",
+    "description": "German-inspired beer festival with live music, authentic cuisine, and traditional celebrations.",
     "organizer": "East African Breweries",
     "prices": {
       "regular": 1200,
@@ -117,7 +122,8 @@
     },
     "featured": false,
     "capacity": 3000,
-    "tags": ["Beer", "Music", "German Culture"]
+    "tags": ["Beer", "Music", "German Culture"],
+    "hasSeating": false
   },
   {
     "id": "7",
@@ -128,7 +134,7 @@
     "time": "19:30",
     "location": "Carnivore Grounds, Nairobi",
     "venue": "Carnivore Simba Saloon",
-    "description": "Kenya's most celebrated band's final tour before hiatus.",
+    "description": "Kenya's most celebrated band's final tour before hiatus - a historic musical event.",
     "organizer": "Sol Generation",
     "prices": {
       "regular": 3000,
@@ -137,7 +143,8 @@
     },
     "featured": true,
     "capacity": 5000,
-    "tags": ["Music", "Kenyan Artists", "Farewell"]
+    "tags": ["Music", "Kenyan Artists", "Farewell"],
+    "hasSeating": true
   },
   {
     "id": "8",
@@ -148,7 +155,7 @@
     "time": "09:00",
     "location": "KICC, Nairobi",
     "venue": "Kenyatta International Convention Centre",
-    "description": "East Africa's premier business and trade exhibition.",
+    "description": "East Africa's premier business and trade exhibition showcasing regional opportunities.",
     "organizer": "Kenya Association of Manufacturers",
     "prices": {
       "regular": 2000,
@@ -157,7 +164,8 @@
     },
     "featured": false,
     "capacity": 10000,
-    "tags": ["Business", "Trade", "Networking"]
+    "tags": ["Business", "Trade", "Networking"],
+    "hasSeating": false
   },
   {
     "id": "9",
@@ -168,7 +176,7 @@
     "time": "10:00",
     "location": "Kajiado County",
     "venue": "Maasai Mara Cultural Centre",
-    "description": "Authentic Maasai cultural experience with traditional dances and crafts.",
+    "description": "Authentic Maasai cultural experience with traditional dances, crafts, and storytelling.",
     "organizer": "Maasai Cultural Association",
     "prices": {
       "regular": 800,
@@ -177,7 +185,8 @@
     },
     "featured": false,
     "capacity": 1500,
-    "tags": ["Culture", "Traditional", "Maasai"]
+    "tags": ["Culture", "Traditional", "Maasai"],
+    "hasSeating": false
   },
   {
     "id": "10",
@@ -188,7 +197,7 @@
     "time": "10:00",
     "location": "Westgate Mall, Nairobi",
     "venue": "Westgate Shopping Mall",
-    "description": "Kenya's largest pop culture and comics convention.",
+    "description": "Kenya's largest pop culture and comics convention with international guests.",
     "organizer": "Kenya Comic Con",
     "prices": {
       "regular": 1500,
@@ -197,7 +206,8 @@
     },
     "featured": false,
     "capacity": 2000,
-    "tags": ["Comics", "Anime", "Pop Culture"]
+    "tags": ["Comics", "Anime", "Pop Culture"],
+    "hasSeating": false
   },
   {
     "id": "11",
@@ -208,7 +218,7 @@
     "time": "18:00",
     "location": "iHub, Nairobi",
     "venue": "iHub Innovation Hub",
-    "description": "Monthly startup community event featuring successful entrepreneurs.",
+    "description": "Monthly startup community event featuring successful entrepreneurs and networking.",
     "organizer": "Startup Grind",
     "prices": {
       "regular": 500,
@@ -217,7 +227,8 @@
     },
     "featured": false,
     "capacity": 200,
-    "tags": ["Startups", "Entrepreneurship", "Networking"]
+    "tags": ["Startups", "Entrepreneurship", "Networking"],
+    "hasSeating": true
   },
   {
     "id": "12",
@@ -228,7 +239,7 @@
     "time": "13:00",
     "location": "Uhuru Gardens, Nairobi",
     "venue": "Uhuru Gardens National Monument",
-    "description": "Nairobi's favorite Sunday afternoon picnic music festival.",
+    "description": "Nairobi's favorite Sunday afternoon picnic music festival with local artists.",
     "organizer": "House of DJs",
     "prices": {
       "regular": 1000,
@@ -237,7 +248,8 @@
     },
     "featured": true,
     "capacity": 3000,
-    "tags": ["Music", "Picnic", "Sunday Afternoon"]
+    "tags": ["Music", "Picnic", "Sunday Afternoon"],
+    "hasSeating": false
   },
   {
     "id": "13",
@@ -248,7 +260,7 @@
     "time": "15:00",
     "location": "Carnivore Grounds, Nairobi",
     "venue": "Carnivore Sports Bar",
-    "description": "Watch Kenya Sevens team compete in style with fellow rugby fans.",
+    "description": "Watch Kenya Sevens team compete in style with fellow rugby fans and refreshments.",
     "organizer": "Kenya Rugby Union",
     "prices": {
       "regular": 800,
@@ -257,7 +269,8 @@
     },
     "featured": false,
     "capacity": 1000,
-    "tags": ["Rugby", "Sports", "Viewing Party"]
+    "tags": ["Rugby", "Sports", "Viewing Party"],
+    "hasSeating": true
   },
   {
     "id": "14",
@@ -277,7 +290,8 @@
     },
     "featured": false,
     "capacity": 2000,
-    "tags": ["Food", "Nyama Choma", "Kenyan Cuisine"]
+    "tags": ["Food", "Nyama Choma", "Kenyan Cuisine"],
+    "hasSeating": false
   },
   {
     "id": "15",
@@ -288,7 +302,7 @@
     "time": "08:30",
     "location": "Radisson Blu, Nairobi",
     "venue": "Radisson Blu Hotel Nairobi",
-    "description": "Leading blockchain and cryptocurrency conference in Africa.",
+    "description": "Leading blockchain and cryptocurrency conference in Africa with global speakers.",
     "organizer": "Blockchain Association of Kenya",
     "prices": {
       "regular": 5000,
@@ -297,6 +311,322 @@
     },
     "featured": false,
     "capacity": 500,
-    "tags": ["Blockchain", "Cryptocurrency", "Technology"]
+    "tags": ["Blockchain", "Cryptocurrency", "Technology"],
+    "hasSeating": true
+  },
+  {
+    "id": "16",
+    "title": "Jamuhuri Day Celebrations",
+    "category": "cultural",
+    "image": "https://images.unsplash.com/photo-1551431009-a802eeec77b1",
+    "date": "2024-12-12",
+    "time": "08:00",
+    "location": "Nyayo Stadium, Nairobi",
+    "venue": "Nyayo National Stadium",
+    "description": "National celebrations marking Kenya's independence with cultural performances.",
+    "organizer": "Government of Kenya",
+    "prices": {
+      "regular": 200,
+      "vip": 1000,
+      "vvip": 2500
+    },
+    "featured": true,
+    "capacity": 30000,
+    "tags": ["National", "Cultural", "Independence"],
+    "hasSeating": true
+  },
+  {
+    "id": "17",
+    "title": "Safari Rally Kenya 2024",
+    "category": "sports",
+    "image": "https://images.unsplash.com/photo-1551431009-a802eeec77b1",
+    "date": "2024-06-27",
+    "time": "06:00",
+    "location": "Naivasha, Kenya",
+    "venue": "Hell's Gate National Park",
+    "description": "World Rally Championship event showcasing Kenya's diverse terrain and motorsport heritage.",
+    "organizer": "WRC Safari Rally Kenya",
+    "prices": {
+      "regular": 1500,
+      "vip": 4000,
+      "vvip": 8000
+    },
+    "featured": true,
+    "capacity": 15000,
+    "tags": ["Rally", "WRC", "Motorsport"],
+    "hasSeating": false
+  },
+  {
+    "id": "18",
+    "title": "Machakos Food Festival",
+    "category": "food",
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0",
+    "date": "2024-07-20",
+    "time": "11:00",
+    "location": "Machakos Town",
+    "venue": "Machakos People's Park",
+    "description": "Celebrating traditional Kamba cuisine and modern fusion dishes from across Kenya.",
+    "organizer": "Machakos County Government",
+    "prices": {
+      "regular": 600,
+      "vip": 1500,
+      "vvip": 3000
+    },
+    "featured": false,
+    "capacity": 3000,
+    "tags": ["Food", "Traditional", "Kamba Culture"],
+    "hasSeating": false
+  },
+  {
+    "id": "19",
+    "title": "Maseno University Innovation Week",
+    "category": "tech",
+    "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e",
+    "date": "2024-11-15",
+    "time": "09:00",
+    "location": "Maseno University",
+    "venue": "Maseno University Amphitheatre",
+    "description": "Student-led innovation showcase featuring cutting-edge research and startups.",
+    "organizer": "Maseno University",
+    "prices": {
+      "regular": 300,
+      "vip": 1000,
+      "vvip": 2000
+    },
+    "featured": false,
+    "capacity": 1000,
+    "tags": ["Innovation", "Students", "Research"],
+    "hasSeating": true
+  },
+  {
+    "id": "20",
+    "title": "Luo Festival of Arts",
+    "category": "cultural",
+    "image": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f",
+    "date": "2024-08-10",
+    "time": "15:00",
+    "location": "Kisumu Lakefront",
+    "venue": "Kisumu Lakefront",
+    "description": "Celebrating Luo culture through traditional music, dance, and storytelling by Lake Victoria.",
+    "organizer": "Luo Cultural Association",
+    "prices": {
+      "regular": 400,
+      "vip": 1200,
+      "vvip": 2500
+    },
+    "featured": false,
+    "capacity": 2500,
+    "tags": ["Luo Culture", "Traditional", "Lake Victoria"],
+    "hasSeating": false
+  },
+  {
+    "id": "21",
+    "title": "Nakuru Agricultural Show",
+    "category": "business",
+    "image": "https://images.unsplash.com/photo-1550989460-0adf9ea622e2",
+    "date": "2024-07-25",
+    "time": "08:00",
+    "location": "Nakuru Showground",
+    "venue": "Nakuru Agricultural Society Showground",
+    "description": "Annual agricultural exhibition showcasing farming innovations and livestock competitions.",
+    "organizer": "Nakuru Agricultural Society",
+    "prices": {
+      "regular": 200,
+      "vip": 800,
+      "vvip": 1500
+    },
+    "featured": false,
+    "capacity": 20000,
+    "tags": ["Agriculture", "Innovation", "Livestock"],
+    "hasSeating": false
+  },
+  {
+    "id": "22",
+    "title": "Eldoret Marathon",
+    "category": "sports",
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b",
+    "date": "2024-09-22",
+    "time": "06:00",
+    "location": "Eldoret Town",
+    "venue": "Eldoret Sports Ground",
+    "description": "International marathon event in the heart of Kenya's running country.",
+    "organizer": "Athletics Kenya",
+    "prices": {
+      "regular": 2000,
+      "vip": 5000,
+      "vvip": 10000
+    },
+    "featured": false,
+    "capacity": 5000,
+    "tags": ["Marathon", "Running", "Athletics"],
+    "hasSeating": false
+  },
+  {
+    "id": "23",
+    "title": "Mombasa Carnival",
+    "category": "festival",
+    "image": "https://images.unsplash.com/photo-1549451371-64aa98a6f632",
+    "date": "2024-11-30",
+    "time": "16:00",
+    "location": "Mombasa Old Town",
+    "venue": "Fort Jesus Grounds",
+    "description": "Coastal celebration featuring Swahili culture, dhow races, and seafood festivals.",
+    "organizer": "Mombasa County Government",
+    "prices": {
+      "regular": 800,
+      "vip": 2000,
+      "vvip": 4000
+    },
+    "featured": true,
+    "capacity": 8000,
+    "tags": ["Swahili Culture", "Coastal", "Traditional"],
+    "hasSeating": false
+  },
+  {
+    "id": "24",
+    "title": "Nairobi Fashion Week",
+    "category": "entertainment",
+    "image": "https://images.unsplash.com/photo-1469334031218-e382a71b716b",
+    "date": "2024-10-18",
+    "time": "18:00",
+    "location": "Villa Rosa Kempinski",
+    "venue": "Villa Rosa Kempinski Hotel",
+    "description": "East Africa's premier fashion showcase featuring top designers and emerging talent.",
+    "organizer": "Fashion Kenya",
+    "prices": {
+      "regular": 3500,
+      "vip": 7000,
+      "vvip": 15000
+    },
+    "featured": true,
+    "capacity": 500,
+    "tags": ["Fashion", "Design", "Style"],
+    "hasSeating": true
+  },
+  {
+    "id": "25",
+    "title": "Lake Turkana Cultural Festival",
+    "category": "cultural",
+    "image": "https://images.unsplash.com/photo-1561948955-570b270e7c36",
+    "date": "2024-06-15",
+    "time": "09:00",
+    "location": "Loiyangalani, Turkana",
+    "venue": "Loiyangalani Cultural Centre",
+    "description": "Remote desert festival celebrating the diverse cultures around Lake Turkana.",
+    "organizer": "Turkana County Government",
+    "prices": {
+      "regular": 1000,
+      "vip": 2500,
+      "vvip": 5000
+    },
+    "featured": false,
+    "capacity": 1000,
+    "tags": ["Desert Culture", "Traditional", "Remote"],
+    "hasSeating": false
+  },
+  {
+    "id": "26",
+    "title": "Rift Valley Music Festival",
+    "category": "festival",
+    "image": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f",
+    "date": "2024-08-17",
+    "time": "14:00",
+    "location": "Naivasha",
+    "venue": "Lake Naivasha Resort",
+    "description": "Multi-day music festival featuring international and local acts by the scenic Lake Naivasha.",
+    "organizer": "Rift Valley Events",
+    "prices": {
+      "regular": 2500,
+      "vip": 5500,
+      "vvip": 12000
+    },
+    "featured": true,
+    "capacity": 10000,
+    "tags": ["Music", "Festival", "Lake Naivasha"],
+    "hasSeating": false
+  },
+  {
+    "id": "27",
+    "title": "Kenya Coffee Championships",
+    "category": "food",
+    "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085",
+    "date": "2024-09-05",
+    "time": "10:00",
+    "location": "Kiambu County",
+    "venue": "Java House Training Centre",
+    "description": "National coffee competition showcasing Kenya's world-renowned coffee culture.",
+    "organizer": "Coffee Board of Kenya",
+    "prices": {
+      "regular": 1500,
+      "vip": 3000,
+      "vvip": 6000
+    },
+    "featured": false,
+    "capacity": 300,
+    "tags": ["Coffee", "Competition", "Culture"],
+    "hasSeating": true
+  },
+  {
+    "id": "28",
+    "title": "Kalenjin Cultural Day",
+    "category": "cultural",
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b",
+    "date": "2024-10-08",
+    "time": "11:00",
+    "location": "Kericho Tea Plantations",
+    "venue": "Kericho Tea Plantations",
+    "description": "Celebrating Kalenjin traditions, running culture, and tea heritage in the highlands.",
+    "organizer": "Kalenjin Cultural Council",
+    "prices": {
+      "regular": 500,
+      "vip": 1500,
+      "vvip": 3000
+    },
+    "featured": false,
+    "capacity": 2000,
+    "tags": ["Kalenjin Culture", "Running", "Tea"],
+    "hasSeating": false
+  },
+  {
+    "id": "29",
+    "title": "East Africa Gaming Convention",
+    "category": "entertainment",
+    "image": "https://images.unsplash.com/photo-1556438064-2d7646166914",
+    "date": "2024-11-22",
+    "time": "09:00",
+    "location": "Sarit Centre, Nairobi",
+    "venue": "Sarit Centre Expo Hall",
+    "description": "Regional gaming convention featuring esports tournaments and gaming exhibitions.",
+    "organizer": "Gaming Kenya",
+    "prices": {
+      "regular": 1200,
+      "vip": 2500,
+      "vvip": 5000
+    },
+    "featured": false,
+    "capacity": 3000,
+    "tags": ["Gaming", "Esports", "Technology"],
+    "hasSeating": false
+  },
+  {
+    "id": "30",
+    "title": "Madaraka Day Celebrations",
+    "category": "cultural",
+    "image": "https://images.unsplash.com/photo-1472091360859-c696d75d65ce",
+    "date": "2024-06-01",
+    "time": "09:00",
+    "location": "Nyeri County",
+    "venue": "Kamuzu Stadium",
+    "description": "National celebrations marking Kenya's self-governance with cultural displays.",
+    "organizer": "Government of Kenya",
+    "prices": {
+      "regular": 150,
+      "vip": 800,
+      "vvip": 2000
+    },
+    "featured": true,
+    "capacity": 20000,
+    "tags": ["National", "Cultural", "Self-Governance"],
+    "hasSeating": true
   }
 ]

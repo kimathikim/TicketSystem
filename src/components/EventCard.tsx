@@ -115,6 +115,10 @@ export const EventCard = ({ event, onClick }: EventCardProps) => {
             variant="default" 
             size="mobile" 
             className="w-full sm:w-auto"
+            onClick={(e) => {
+              e.stopPropagation();
+              onClick?.(event.id);
+            }}
           >
             Buy Tickets
           </Button>
