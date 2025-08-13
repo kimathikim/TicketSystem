@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
-import { Eye, EyeOff, Mail, Lock } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { Eye, EyeOff, Mail, Lock, User, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -8,45 +8,77 @@ import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useAuth } from "@/contexts/AuthContext";
 
-const Login = () => {
+const Register = () => {
   const navigate = useNavigate();
-  const location = useLocation();
-  const { signIn, user, loading } = useAuth();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const { signUp, user, loading } = useAuth();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    password: "",
+    confirmPassword: ""
+  });
   const [showPassword, setShowPassword] = useState(false);
-  const [rememberMe, setRememberMe] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [agreeToTerms, setAgreeToTerms] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-
-  // Redirect to intended page after login
-  const from = location.state?.from?.pathname || "/";
 
   useEffect(() => {
     // If user is already logged in, redirect them
     if (user && !loading) {
-      navigate(from, { replace: true });
+      navigate("/", { replace: true });
     }
-  }, [user, loading, navigate, from]);
+  }, [user, loading, navigate]);
 
-  const handleLogin = async (e: React.FormEvent) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
     if (isSubmitting) return;
 
+    // Validation
+    if (formData.password !== formData.confirmPassword) {
+      alert("Passwords don't match!");
+      return;
+    }
+
+    if (formData.password.length < 6) {
+      alert("Password must be at least 6 characters long!");
+      return;
+    }
+
+    if (!agreeToTerms) {
+      alert("Please agree to the terms and conditions!");
+      return;
+    }
+
     setIsSubmitting(true);
     try {
-      await signIn(email, password);
-      // Navigation will be handled by the useEffect above
+      await signUp(
+        formData.email,
+        formData.password,
+        formData.name,
+        formData.phone || undefined
+      );
+      // Success message is handled in AuthContext
+      // User will need to verify email before they can login
     } catch (error) {
       // Error handling is done in the AuthContext
-      console.error('Login error:', error);
+      console.error('Registration error:', error);
     } finally {
       setIsSubmitting(false);
     }
   };
 
-  const handleSocialLogin = (provider: string) => {
+  const handleSocialRegister = (provider: string) => {
     // This would be implemented later for social auth
-    console.log(`${provider} login will be available soon!`);
+    console.log(`${provider} registration will be available soon!`);
   };
 
   // Show loading spinner while checking auth state
@@ -75,20 +107,39 @@ const Login = () => {
             </span>
           </div>
           <h1 className="font-heading font-bold text-2xl sm:text-3xl mb-2">
-            Welcome Back!
+            Join TicketKenya!
           </h1>
           <p className="text-muted-foreground">
-            Sign in to access your tickets and discover events
+            Create your account to start booking amazing events
           </p>
         </div>
 
-        {/* Login Form */}
+        {/* Registration Form */}
         <Card className="shadow-elegant border-0 bg-gradient-card">
           <CardHeader className="space-y-1 pb-4">
-            <CardTitle className="font-heading text-xl">Sign In</CardTitle>
+            <CardTitle className="font-heading text-xl">Create Account</CardTitle>
           </CardHeader>
           <CardContent>
-            <form onSubmit={handleLogin} className="space-y-4">
+            <form onSubmit={handleRegister} className="space-y-4">
+              {/* Name */}
+              <div className="space-y-2">
+                <Label htmlFor="name">Full Name</Label>
+                <div className="relative">
+                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
+                  <Input
+                    id="name"
+                    name="name"
+                    type="text"
+                    placeholder="Enter your full name"
+                    className="pl-10"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    required
+                    disabled={isSubmitting}
+                  />
+                </div>
+              </div>
+
               {/* Email */}
               <div className="space-y-2">
                 <Label htmlFor="email">Email Address</Label>
@@ -96,12 +147,31 @@ const Login = () => {
                   <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
                   <Input
                     id="email"
+                    name="email"
                     type="email"
                     placeholder="Enter your email"
                     className="pl-10"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    value={formData.email}
+                    onChange={handleInputChange}
                     required
+                    disabled={isSubmitting}
+                  />
+                </div>
+              </div>
+
+              {/* Phone */}
+              <div className="space-y-2">
+                <Label htmlFor="phone">Phone Number (Optional)</Label>
+                <div className="relative">
+                  <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
+                  <Input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    placeholder="Enter your phone number"
+                    className="pl-10"
+                    value={formData.phone}
+                    onChange={handleInputChange}
                     disabled={isSubmitting}
                   />
                 </div>
@@ -114,11 +184,12 @@ const Login = () => {
                   <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
                   <Input
                     id="password"
+                    name="password"
                     type={showPassword ? "text" : "password"}
-                    placeholder="Enter your password"
+                    placeholder="Create a password"
                     className="pl-10 pr-10"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
+                    value={formData.password}
+                    onChange={handleInputChange}
                     required
                     disabled={isSubmitting}
                   />
@@ -133,27 +204,61 @@ const Login = () => {
                 </div>
               </div>
 
-              {/* Remember Me & Forgot Password */}
-              <div className="flex items-center justify-between">
-                <div className="flex items-center space-x-2">
-                  <Checkbox 
-                    id="remember"
-                    checked={rememberMe}
-                    onCheckedChange={(checked) => setRememberMe(checked as boolean)}
+              {/* Confirm Password */}
+              <div className="space-y-2">
+                <Label htmlFor="confirmPassword">Confirm Password</Label>
+                <div className="relative">
+                  <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
+                  <Input
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    type={showConfirmPassword ? "text" : "password"}
+                    placeholder="Confirm your password"
+                    className="pl-10 pr-10"
+                    value={formData.confirmPassword}
+                    onChange={handleInputChange}
+                    required
                     disabled={isSubmitting}
                   />
-                  <Label htmlFor="remember" className="text-sm">
-                    Remember me
-                  </Label>
+                  <button
+                    type="button"
+                    onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                    disabled={isSubmitting}
+                  >
+                    {showConfirmPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+                  </button>
                 </div>
-                <button
-                  type="button"
-                  className="text-sm text-primary hover:text-primary/80 font-medium"
-                  onClick={() => console.log("Password reset will be available soon!")}
+              </div>
+
+              {/* Terms Agreement */}
+              <div className="flex items-start space-x-2">
+                <Checkbox 
+                  id="terms"
+                  checked={agreeToTerms}
+                  onCheckedChange={(checked) => setAgreeToTerms(checked as boolean)}
                   disabled={isSubmitting}
-                >
-                  Forgot password?
-                </button>
+                />
+                <Label htmlFor="terms" className="text-sm leading-relaxed">
+                  I agree to the{" "}
+                  <button
+                    type="button"
+                    className="text-primary hover:text-primary/80 font-medium"
+                    onClick={() => console.log("Terms and Conditions")}
+                    disabled={isSubmitting}
+                  >
+                    Terms and Conditions
+                  </button>
+                  {" "}and{" "}
+                  <button
+                    type="button"
+                    className="text-primary hover:text-primary/80 font-medium"
+                    onClick={() => console.log("Privacy Policy")}
+                    disabled={isSubmitting}
+                  >
+                    Privacy Policy
+                  </button>
+                </Label>
               </div>
 
               {/* Submit Button */}
@@ -161,9 +266,9 @@ const Login = () => {
                 type="submit" 
                 className="w-full" 
                 size="lg"
-                disabled={isSubmitting}
+                disabled={isSubmitting || !agreeToTerms}
               >
-                {isSubmitting ? "Signing In..." : "Sign In"}
+                {isSubmitting ? "Creating Account..." : "Create Account"}
               </Button>
             </form>
 
@@ -174,17 +279,17 @@ const Login = () => {
               </div>
               <div className="relative flex justify-center text-xs uppercase">
                 <span className="bg-background px-2 text-muted-foreground">
-                  Or continue with
+                  Or register with
                 </span>
               </div>
             </div>
 
-            {/* Social Login */}
+            {/* Social Registration */}
             <div className="space-y-3">
               <Button 
                 variant="outline" 
                 className="w-full" 
-                onClick={() => handleSocialLogin("Google")}
+                onClick={() => handleSocialRegister("Google")}
                 disabled={isSubmitting}
               >
                 <svg className="w-4 h-4 mr-2" viewBox="0 0 24 24">
@@ -197,16 +302,16 @@ const Login = () => {
               </Button>
             </div>
 
-            {/* Sign Up Link */}
+            {/* Sign In Link */}
             <div className="text-center mt-6">
               <p className="text-sm text-muted-foreground">
-                Don't have an account?{" "}
+                Already have an account?{" "}
                 <button
-                  onClick={() => navigate("/register")}
+                  onClick={() => navigate("/login")}
                   className="text-primary hover:text-primary/80 font-medium"
                   disabled={isSubmitting}
                 >
-                  Sign up here
+                  Sign in here
                 </button>
               </p>
             </div>
@@ -228,4 +333,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;
