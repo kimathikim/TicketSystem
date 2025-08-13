@@ -16,7 +16,6 @@ extra_search_path = ["public", "extensions"]
 max_rows = 1000
 
 [db]
-enabled = true
 # Port to use for the local database URL.
 port = 54322
 # Port used by db diff command to initialize the shadow database.
@@ -64,7 +63,7 @@ additional_redirect_urls = ["https://127.0.0.1:5173"]
 # How long tokens are valid for, in seconds. Defaults to 3600 (1 hour), maximum 604800 (1 week).
 jwt_expiry = 3600
 # If disabled, the refresh token will never expire.
-refresh_token_rotation_enabled = true
+# refresh_token_rotation_enabled = true
 # Allows refresh tokens to be reused after expiry, up to the specified interval in seconds.
 # Requires refresh_token_rotation_enabled to be false.
 # refresh_token_reuse_interval = 10
@@ -91,11 +90,11 @@ enable_signup = true
 # If enabled, users need to confirm their phone number before signing in.
 enable_confirmations = false
 # Template for sending a confirmation message for phone change.
-phone_change_template = "Your code is {{ .Code }} ."
+# phone_change_template = "Your code is {{ .Code }} ."
 # Template for sending a confirmation message for phone confirmation. e.g "Your code is {{ .Code }} ."
-confirmation_template = "Your code is {{ .Code }} ."
+# confirmation_template = "Your code is {{ .Code }} ."
 # Template for sending a recovery message for password reset. e.g "Your code is {{ .Code }} ."
-recovery_template = "Your code is {{ .Code }} ."
+# recovery_template = "Your code is {{ .Code }} ."
 
 # Use pre-defined map of phone number to OTP for testing.
 # [auth.sms.test_otp]
@@ -123,11 +122,11 @@ recovery_template = "Your code is {{ .Code }} ."
 # # or any other third-party OIDC providers.
 # url = ""
 
-[edge_functions]
-enabled = true
+# [edge_functions]
+# enabled = true
 # Configure one of the supported request policies: `oneshot`, `per_worker`.
 # Use `oneshot` for hot reload, or `per_worker` for load testing.
-request_policy = "oneshot"
+# request_policy = "oneshot"
 
 [analytics]
 enabled = false
